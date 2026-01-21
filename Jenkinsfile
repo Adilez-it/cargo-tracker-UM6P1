@@ -17,7 +17,7 @@ pipeline {
             }
         }
 //test for Webhook
-        stage('Build & Test') {
+        stage('Build & Test webhook') {
             steps {
                 bat 'mvn clean verify'
             }
