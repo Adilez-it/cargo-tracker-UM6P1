@@ -5,11 +5,15 @@ pipeline {
         githubPush()   
     }
 
+    tools {
+    maven 'Maven'  // This name must match the name you configured in Jenkins
+}
+
     stages {
 
         stage('Clone') {
             steps {
-                git branch: 'develop', url: 'https://github.com/Adilez-it/cargo-tracker.git'
+                git branch: 'main', url: 'https://github.com/Adilez-it/cargo-tracker-UM6P1.git'
             }
         }
 
