@@ -9,7 +9,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git branch: 'develop', url: 'https://github.com/akito-sama/cargo-tracker.git'
+                git branch: 'develop', url: 'https://github.com/Adilez-it/cargo-tracker.git'
             }
         }
 
@@ -19,7 +19,7 @@ pipeline {
             }
         }
 
-        stage('SonarQube Analysis') {
+        /*stage('SonarQube Analysis') {
             environment {
                 SONAR_TOKEN = credentials('sonar-token-id')
             }
@@ -35,7 +35,7 @@ pipeline {
                     """
                 }
             }
-        }
+        }*/
     }
 //
     post {
