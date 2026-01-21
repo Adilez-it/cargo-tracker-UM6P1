@@ -16,8 +16,8 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Adilez-it/cargo-tracker-UM6P1.git'
             }
         }
-
-        stage('Build & Test with Coverage') {
+//test for webhook
+        stage('Build & Test') {
             steps {
                 bat 'mvn clean verify'
             }
